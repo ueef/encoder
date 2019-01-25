@@ -18,7 +18,7 @@ class JsonEncoder implements EncoderInterface
         $this->encode_options = $encodeOptions;
     }
 
-    public function encode(array $message): string
+    public function encode($message): string
     {
         $message = json_encode($message, $this->encode_options);
 
@@ -29,7 +29,7 @@ class JsonEncoder implements EncoderInterface
         return $message;
     }
 
-    public function decode(string $message): array
+    public function decode(string $message)
     {
         $message = json_decode($message, true);
 
